@@ -27,7 +27,32 @@
             Console.WriteLine();
             Console.WriteLine(); // blank lines
 
+            // Section B
 
+            Console.WriteLine("Section B - Campus Access Check");
+
+            Console.WriteLine("Enter your age: ");
+            int age = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Are you currently enrolled? (yes/no): ");
+            bool isEnrolled = Console.ReadLine().ToLower() == "yes";
+
+            Console.WriteLine("Do you have a valid student ID? (yes/no): ");
+            bool hasStudentId = Console.ReadLine().ToLower() == "yes";
+
+            if (age >= 18)
+            {
+                if (isEnrolled || hasStudentId)
+                {
+                    Console.WriteLine("Campus Access Granted");
+                }
+				else
+				{
+                    Console.WriteLine("Campus Acess Denied");
+				}
+			}
+            Console.WriteLine();
+            Console.WriteLine();
         }
     }
 }
